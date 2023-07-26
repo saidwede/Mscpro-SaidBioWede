@@ -1,13 +1,12 @@
-//console.log("***********");
-process.argv.forEach(function (val, index, array) {
-    //console.log(index + ': ' + val);
-});
 let size = 0;
 let line = 1;
 let totalLine = 0;
 let starMap = [];
 
 size = parseInt(process.argv[2]);
+if(size == 0){
+    return;
+}
 let firstStartDec = (6*size)/2;
 totalLine = 4*size + 1;
 
