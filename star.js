@@ -35,27 +35,18 @@ for (let index = 0; index < starMap.length; index++) {
                 
             }
         }
+        if(index > size && index < size*2 +1){
+            starMap[index][index-size] = "*";
+            starMap[index][6*size - index + size] = "*";
+        }
     }
 }
 
 
-starMap.forEach(element => {
+starMap.forEach((element, i2) => {
     outLine = "";
     element.forEach(char => {
         outLine += char;
     });
     console.log(outLine);
 });
-//console.log(starMap);
-
-// for (let starLine = 0; starLine < array.length; starLine++) {
-//     for (let index = 0; index < firstStartDec; index++) {
-//         starMap[0] += " ";
-//     }
-// }
-
-// for (let index = 0; index < firstStartDec; index++) {
-//     starMap[0] += " ";
-// }
-// starMap[0] += "*";
-// console.log(starMap[0]);
