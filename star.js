@@ -11,7 +11,7 @@ size = parseInt(process.argv[2]);
 let firstStartDec = (6*size)/2;
 totalLine = 4*size + 1;
 
-for (let index = 0; index < totalLine; index++) {
+for (let index = 0; index < size*2 +1; index++) {
     let emptyLine = [];
     for (let index0 = 0; index0 < size*6+1 ; index0++) {
         emptyLine[index0] = " ";
@@ -44,9 +44,21 @@ for (let index = 0; index < starMap.length; index++) {
 
 
 starMap.forEach((element, i2) => {
-    outLine = "";
-    element.forEach(char => {
-        outLine += char;
-    });
-    console.log(outLine);
+    if( i2 < size*2 +1){
+        outLine = "";
+        element.forEach(char => {
+            outLine += char;
+        });
+        console.log(outLine);
+    }
+});
+starMap.reverse();
+starMap.forEach((element, i2) => {
+    if( i2 < size*2 +1){
+        outLine = "";
+        element.forEach(char => {
+            outLine += char;
+        });
+        console.log(outLine);
+    }
 });
