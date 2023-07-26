@@ -53,6 +53,7 @@ starMap.forEach((element, i2) => {
     }
 });
 starMap.reverse();
+starMap.shift();
 starMap.forEach((element, i2) => {
     if( i2 < size*2 +1){
         outLine = "";
